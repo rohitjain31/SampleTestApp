@@ -1,0 +1,22 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html ng-app="ExamSolution">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Staring Page</title>
+    @System.Web.Optimization.Styles.Render("~/Content/css")
+</head>
+<body>
+    <base href="/">
+    <div ui-view>
+    </div>
+
+    @System.Web.Optimization.Scripts.Render("~/bundles/library")
+    @System.Web.Optimization.Scripts.Render("~/bundles/app")
+
+</body>
+</html>

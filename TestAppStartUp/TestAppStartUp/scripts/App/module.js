@@ -1,0 +1,1 @@
+﻿var ExamSolution = angular.module("ExamSolution", ["ngSanitize", "ui.router", "AdalAngular"]);
