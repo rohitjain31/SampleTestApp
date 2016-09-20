@@ -123,6 +123,9 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebGrease">
+      <HintPath>D:\Project\ESPhoenixCatalog\Phoenix 2.0-Dev\Phoenix\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -145,6 +148,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Css\style.css" />
     <Content Include="Content\jquery-ui.css" />
     <Content Include="Global.asax" />
     <Content Include="Index.html" />
@@ -152,6 +156,7 @@
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="scripts\App\config.js" />
     <Content Include="scripts\App\loginCtrl\loginController.js" />
+    <Content Include="scripts\App\loginCtrl\registerCtrl.js" />
     <Content Include="scripts\App\module.js" />
     <Content Include="scripts\Library\Adal\adal-angular.js" />
     <Content Include="scripts\Library\Adal\adal.js" />
@@ -189,6 +194,10 @@
     <Content Include="scripts\Library\underscore\underscore.min.js" />
     <Content Include="scripts\reference.js" />
     <Content Include="Templates\Login\login.html" />
+    <Content Include="Templates\Login\signUp.html" />
+    <Content Include="Templates\Menus\About.html" />
+    <Content Include="Templates\Menus\Contact.html" />
+    <Content Include="Templates\Menus\Home.html" />
     <Content Include="Web.config" />
     <Content Include="scripts\Library\underscore\underscore.min.map" />
     <Content Include="Views\Index.cshtml" />
@@ -203,7 +212,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\Css\" />
     <Folder Include="Content\Fonts\" />
     <Folder Include="Content\Images\" />
   </ItemGroup>

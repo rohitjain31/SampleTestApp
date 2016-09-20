@@ -37,14 +37,18 @@ namespace TestAppStartUp
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
                 //Module
                 "~/Scripts/App/module.js",
-                "~/Scripts/App/config.js"
+                "~/Scripts/App/config.js",
+
+                //Login Scripts
+                "~/Scripts/App/loginCtrl/loginController.js",
+                "~/Scripts/App/loginCtrl/registerCtrl.js"
                 ));
 
 
 
             //Style
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                "~/Content/Css/style.css", "~/Content/jquery-ui.css"));
+                "~/Content/Css/style.css", "~/Content/jquery-ui.css", "~/Content/bootstrap.min.css"));
             
         }
     }
