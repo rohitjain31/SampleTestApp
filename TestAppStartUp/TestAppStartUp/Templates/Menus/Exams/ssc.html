@@ -1,0 +1,40 @@
+﻿
+<div style="border:solid black">
+    <div style="margin:10px"> 
+        <span>Answered  </span><label class="label label-default">0</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span>UnAnswered  </span><label class="label label-default">0</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span>Not Visited  </span><label class="label label-default">0</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span>Marked for Review  </span><label class="label label-default">0</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span style="float:right"><b>Time Left : 20:12</b></span>
+    </div>
+</div>
+<div style="border:solid gray; overflow-y:auto">
+    <br />
+    <label>Question {{srNum}} : {{question}}</label>
+    <hr />
+    <ul style="list-style-type:none">
+        <li ng-repeat="choice in choices">
+            <p>
+                <input type="radio" name="{{srNum}}" value="{{choice}}" ng-click="checkAnswer(this)" />{{choice}}
+            </p>
+        </li>
+    </ul>
+</div>
+<br /><br />
+<div style="border:solid black">
+    <div style="margin:10px">
+        <button class="btn btn-default">Mark for Review & Next</button>&nbsp;&nbsp;
+        <button class="btn btn-default">Clear Response</button>&nbsp;&nbsp;
+        <button class="btn btn-primary" style="float:right">Save & Next</button>&nbsp;&nbsp;
+    </div>
+</div>
+<br /><br /><br /><br />
+<div style="border:solid black">
+    <div style="margin:10px">
+        <ul class="nav">
+            <li >
+                <button style="margin:5px"  class="btn btn-info" ng-repeat="question in getTimes(NumberOfQuestions) track by $index" ng-click="goToQuestion(this)">{{$index + 1}}</button>
+            </li>
+        </ul>
+    </div>
+</div>

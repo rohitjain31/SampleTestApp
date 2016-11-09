@@ -1,32 +1,40 @@
 ﻿@using System.Web.UI.WebControls
-
 @{
     Layout = null;
 }
-
 <!DOCTYPE html>
-
 <html ng-app="ExamSolution">
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Staring Page</title>
-    @System.Web.Optimization.Styles.Render("~/Content/Css")
+    @System.Web.Optimization.Styles.Render("~/Content/css")
 </head>
-<body>
+<body ng-controller="indexCtrl">
     <base href="/">
-
 
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">WebSiteName</a>
             </div>
+
             <ul class="nav navbar-nav">
-                <li class="active"><a ui-sref="Home">Home</a></li>
-                <li><a ui-sref="About">About</a></li>
-                <li><a ui-sref="Contact">Contact</a></li>
-            </ul>
+                    <li class="dropdown" ng-repeat="item in items">
+                        <a ui-sref={{item.name}}>{{item.name}}</a>
+                        <ul>
+                            <li class="dropdown-content" style="left:0;" >
+                                <a ui-sref="{{menu.menuName}}" ng-repeat="menu in item.menuItem">{{menu.menuName}}</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             <ul class="nav navbar-nav navbar-right">
+                <li class="search">
+                    <input type="text" name="search" class="form-control" placeholder="Search" />
+                    <button type="button" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-search"></span> Search
+                    </button>
+                </li>
                 <li><a ui-sref="SignUp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                 <li><a ui-sref="Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
@@ -34,16 +42,13 @@
     </nav>
     <div class="container" ui-view>
     </div>
-
     <div class="modal-footer">
         <h3>Developer</h3>
         <p>Rohit Jain</p>
         <p>(non editable)</p>
     </div>
 
-    
     @System.Web.Optimization.Scripts.Render("~/bundles/library")
     @System.Web.Optimization.Scripts.Render("~/bundles/app")
-
 </body>
 </html>
